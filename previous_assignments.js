@@ -28,3 +28,20 @@ document.getElementById('closeButton').addEventListener('click', function() {
 document.getElementById('backButton').addEventListener('click', function() {
     history.back();
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Elemente auswählen
+    const chatButton = document.getElementById("chatButton");
+    const chatPopup = document.getElementById("chatPopup");
+    const closeChatButton = document.getElementById("closeChatButton");
+
+    // Chat öffnen
+    chatButton.addEventListener("click", function() {
+        chatPopup.style.display = "flex"; // Chat anzeigen
+    });
+
+    // Chat schließen
+    closeChatButton.addEventListener("click", function() {
+        chatPopup.style.display = "none"; // Chat ausblenden
+    });
+});

@@ -183,3 +183,58 @@ button:hover {
 #backButton {
     font-size: 16px;
 }
+
+#chatButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px;
+    font-size: 24px;
+}
+
+#chatButton:hover {
+    background-color: #00796b;
+}
+
+#chatPopup {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#chatHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#closeChatButton {
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+#chatInput {
+    width: 90%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#sendMessage {
+    width: 100%;
+    padding: 10px;
+}
+
+#sendMessage:hover {
+    background-color: #00796b;
+}
