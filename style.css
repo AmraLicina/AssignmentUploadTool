@@ -93,6 +93,8 @@ input {
     flex-wrap: wrap;
     padding: 20px;
     position: relative;
+    margin: 20px auto;
+
 }
 
 #avatar {
@@ -127,7 +129,7 @@ input {
     right: 5px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .hidden {
