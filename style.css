@@ -174,4 +174,12 @@ button:hover {
     background-color: #679286;
 }
 
+#backButtonContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
 
+#backButton {
+    font-size: 16px;
+}

@@ -24,3 +24,7 @@ document.getElementById('closeButton').addEventListener('click', function() {
     // Avatar zurücksetzen
     document.getElementById('avatar').classList.remove('clicked');
 });
+
+document.getElementById('backButton').addEventListener('click', function() {
+    history.back();
+});
