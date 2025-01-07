@@ -93,7 +93,7 @@ input {
     flex-wrap: wrap;
     padding: 20px;
     position: relative;
-    margin: 20px auto;
+    
 
 }
 
@@ -121,6 +121,22 @@ input {
     border-radius: 10px;
     display: none;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 726px) {
+    #speechBubble {
+        left: -50px; /* Links von #avatar */
+        transform: translateX(-50%);
+    }
+}
+
+/* Alternative Ansicht für kleinere Bildschirme */
+@media (max-width: 725px) {
+    #speechBubble {
+        left: 100px; /* Rechts vom Avatar */
+        right: -70px;
+        transform: translateX(0%);
+    }
 }
 
 #closeButton {
