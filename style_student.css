@@ -78,3 +78,17 @@ body {
 #paBtn:hover {
     background-color: #679286;
 }
+
+.logo-button{
+    position: absolute;
+    left: 20px;
+}
+
+.logo-button:hover {
+    opacity: 0.8;
+}
+
+.logo-button img {
+    width: 50px;
+    height: auto;
+}
