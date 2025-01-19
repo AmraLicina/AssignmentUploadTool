@@ -82,6 +82,15 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    mainContent.addEventListener("click", function (event) {
+        if (event.target && event.target.classList.contains("cancel-upload-btn")) {
+            const fileInput = event.target.closest("form").querySelector("input[type='file']");
+            if (fileInput) {
+                fileInput.value = "";
+            }
+        }
+    });
+
     // Funktion zur Anzeige des Inhalts für einen ausgewählten Studenten
     function generateStudentContent(courseName, studentId) {
         return `
@@ -96,6 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <label for="file-upload">Korrektur hochladen:</label>
                 <input type="file" id="file-upload" name="file" accept=".pdf, .doc, .docx, .jpeg, .jpg, .png" required>
                 <button type="submit">Hochladen</button>
+                <button type="button" class="cancel-upload-btn">delete</button>
             </form>
             <br>
             <form class="points-form">

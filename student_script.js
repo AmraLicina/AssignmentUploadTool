@@ -31,6 +31,14 @@ document.addEventListener("DOMContentLoaded", function () {
                         alert("Bitte wählen Sie eine Datei aus.");
                     }
                 });
+                const cancelButton = uploadForm.querySelector("button[type='button']")
+                if (cancelButton) {
+                    cancelButton.addEventListener("click", function(){
+                        const fileInput = uploadForm.querySelector("input[type='file']");
+                        fileInput.value = "";
+                        alert("Datei gelöscht.");
+                    });
+                }
             }
         });
     });
@@ -43,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <label for="file-upload">Hausaufgabe hochladen:</label>
                 <input type="file" id="file-upload" name="file" accept=".pdf, .doc, .docx, .jpeg, .jpg, .png" required>
                 <button type="submit">Hochladen</button>
+                <button type="button">delete</button>
             </form>
             <div id="BtnContainer">
                 <button id="paBtn" onclick="saveCourseAndNavigate('${courseName}')">Previous Assignments</button>
