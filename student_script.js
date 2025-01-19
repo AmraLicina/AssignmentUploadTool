@@ -17,9 +17,16 @@ document.addEventListener("DOMContentLoaded", function () {
                     event.preventDefault();
                     const fileInput = this.querySelector("input[type='file']");
                     const file = fileInput.files[0];
+                    const maxFileSize = 500 * 1024 * 1024;
+
                     if (file) {
-                        alert(`Datei "${file.name}" für den Kurs "${courseName}" erfolgreich hochgeladen!`);
-                        fileInput.value = ""; // Leert das Eingabefeld
+                        if (file.size > maxFileSize) {
+                            alert("ausgewählte Datei ist zu groß. Bitte Wählen sie eine Datei, die die maximale Größe von 500MB nicht überschreitet.");
+                            fileInput.value = "";
+                        } else {    
+                            alert(`Datei "${file.name}" für den Kurs "${courseName}" erfolgreich hochgeladen!`);
+                            fileInput.value = ""; // Leert das Eingabefeld
+                        }
                     } else {
                         alert("Bitte wählen Sie eine Datei aus.");
                     }
@@ -34,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <p>Hier können Sie Hausaufgaben für den Kurs <strong>${courseName}</strong> hochladen.</p>
             <form class="upload-form">
                 <label for="file-upload">Hausaufgabe hochladen:</label>
-                <input type="file" id="file-upload" name="file" required>
+                <input type="file" id="file-upload" name="file" accept=".pdf, .doc, .docx, .jpeg, .jpg, .png" required>
                 <button type="submit">Hochladen</button>
             </form>
             <div id="BtnContainer">

@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <br>
             <form class="upload-form">
                 <label for="file-upload">Korrektur hochladen:</label>
-                <input type="file" id="file-upload" name="file" required>
+                <input type="file" id="file-upload" name="file" accept=".pdf, .doc, .docx, .jpeg, .jpg, .png" required>
                 <button type="submit">Hochladen</button>
             </form>
             <br>
