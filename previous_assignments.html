@@ -25,10 +25,18 @@
     </div>
 
     <div id="avatarContainer">
-    <div id="avatar"></div>
-    <div id="speechBubble" class="hidden">
-        <span id="closeButton">x</span>
-        Du hast in diesem Kurs schon 53/100 Punkten erreicht!</div>
+        <div id="avatar"></div>
+        <div id="speechBubble" class="hidden">
+            <span id="closeButton">x</span>
+            <p id="assistantText">Was kann ich für dich tun?</p>
+            <ul id="assistantOptions">
+                <li><button onclick="location.href='index.html';">Bitte log mich aus</button></li>
+                <li><button id="chatButtonAvatar" class="chat-open-button">Ich möchte mit anderen Studis chatten</button></li>
+                <li><button id="backButtonAvatar" class="back-Button">Zurück zur letzten Seite</button></li>
+                <li><button id="npointsButton">Wie viele Punkte habe ich schon?</button></li>
+                <li><button id="motivationButton">Bitte gib mir aufmunternde Worte!</button></li>
+            </ul>
+        </div>
     </div>
 
     </div>
@@ -77,10 +85,10 @@
         </tbody>
     </table>
     <div id="backButtonContainer">
-        <button id="backButton">&#9166;</button>
+        <button id="backButton" class="back-Button">&#9166;</button>
     </div>
 
-    <button id="chatButton">💬</button>
+    <button id="chatButton" class="chat-open-button">💬</button>
     <div id="chatPopup" class="hidden">
         <div id="chatHeader">
             <h3>Studenten-Gruppenchat:</h3>

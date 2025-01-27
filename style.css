@@ -272,3 +272,10 @@ button:hover {
     width: 50px;
     height: auto;
 }
+
+#speechBubble ul li {
+    text-align: center; 
+    left: 5px;
+    margin: 5px;
+    align-items: center;
+}
